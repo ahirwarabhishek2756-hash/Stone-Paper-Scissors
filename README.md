@@ -2,22 +2,28 @@
 
 ### Choose Your Game. Challenge Your Friends. Become a Legend.
 
-**ANIME PLAY ARENA** is a modern, anime-inspired gaming website featuring interactive mini-games, neon visuals, smooth animations, and multiplayer gameplay. It brings classic games into an exciting gaming arena with a dark fantasy atmosphere.
+**ANIME PLAY ARENA** is a modern, anime-inspired gaming website featuring interactive mini-games, neon visuals, smooth animations, and multiplayer gameplay.
+
+## 🌐 Live Website
+
+🚀 **Play Now:** [https://anime-play-arena-jjww.bolt.host)
+
+> Replace `YOUR_LIVE_WEBSITE_URL` with your published website URL.
 
 ## ✨ Features
 
-- 🎌 **Anime-Inspired Design** — Dark backgrounds, neon gradients, glowing effects, and animated elements.
+- 🎌 **Anime-Inspired Design** — Dark backgrounds, neon gradients, and glowing effects.
 - 🪨 **Stone Paper Scissors** — Play against the computer or challenge friends.
-- 🐍 **Snakes & Ladders** — Enjoy a classic board game with dice rolls, snakes, ladders, and player tokens.
-- 👥 **Multiplayer Modes** — Supports local gameplay for 2, 3, and 4 players.
-- 🤖 **Computer Opponents** — Play supported games against computer-controlled opponents.
+- 🐍 **Snakes & Ladders** — Enjoy a classic board game with dice rolls, snakes, and ladders.
+- 👥 **Multiplayer Modes** — Local gameplay for 2, 3, and 4 players, where supported.
+- 🤖 **Computer Opponents** — Play against computer-controlled opponents where supported.
 - 🏆 **Score Tracking** — Track scores, rounds, turns, and winners.
 - 📱 **Responsive Design** — Designed for desktop, tablet, and mobile screens.
 - 🎬 **Smooth Animations** — Interactive buttons, transitions, and victory effects.
 
 ## 🎯 Project Goal
 
-The goal of this project is to create an engaging gaming platform that combines classic games with modern web technologies and an anime-inspired visual experience.
+The goal of this project is to combine classic games with modern web technologies and an anime-inspired visual experience.
 
 ## 🛠️ Tech Stack
 
@@ -66,8 +72,6 @@ A traditional board game featuring a 10×10 board, dice rolling, player movement
    ```bash
    npm run dev
    ```
-
-5. Open the local URL shown in your terminal.
 
 ## 📁 Project Structure
 
