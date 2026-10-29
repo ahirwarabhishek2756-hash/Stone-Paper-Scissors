@@ -16,7 +16,7 @@ export default function DiceFace({ value, rolling }: DiceFaceProps) {
   return (
     <div
       key={rolling ? 'rolling' : `value-${value}`}
-      className={`grid h-20 w-20 grid-cols-3 grid-rows-3 gap-1 rounded-2xl border border-white/30 bg-gradient-to-br from-slate-100 to-slate-300 p-2.5 shadow-[0_0_30px_rgba(56,189,248,0.35)] ${
+      className={`grid h-20 w-20 grid-cols-3 grid-rows-3 gap-1 rounded-2xl border border-white/30 bg-slate-100 p-2.5 shadow-[0_6px_18px_rgba(15,23,42,0.4)] ${
         rolling ? 'animate-dice-roll' : 'animate-pop'
       }`}
       role="img"

@@ -140,19 +140,19 @@ export default function SnakesGameScreen({ setup, onHome, onMainMenu, onNewGame 
                 </GlowButton>
               </div>
             </div>
-            <p className="mt-5 min-h-[3rem] text-base text-cyan-100" aria-live="polite">
+            <p className="mt-5 min-h-[3rem] text-base text-slate-200" aria-live="polite">
               {message}
             </p>
           </section>
 
           <section className="glass rounded-2xl p-5">
-            <h3 className="font-display text-xs font-extrabold uppercase tracking-[0.18em] text-cyan-100">Players</h3>
+            <h3 className="font-display text-xs font-extrabold uppercase tracking-[0.18em] text-slate-200">Players</h3>
             <ul className="mt-4 space-y-3">
               {participants.map((p, i) => (
                 <li
                   key={i}
                   className={`flex items-center justify-between rounded-xl border px-3 py-2.5 transition-colors duration-300 ${
-                    i === current && phase !== 'won' ? 'border-cyan-300/60 bg-cyan-400/10' : 'border-white/10 bg-slate-950/40'
+                    i === current && phase !== 'won' ? 'border-indigo-300/40 bg-indigo-400/10' : 'border-white/10 bg-slate-950/40'
                   }`}
                 >
                   <span className="flex items-center gap-3">
@@ -173,14 +173,14 @@ export default function SnakesGameScreen({ setup, onHome, onMainMenu, onNewGame 
       </main>
 
       {phase === 'won' && winnerPlayer && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/70 p-4 backdrop-blur-sm">
+        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/60 p-4">
           <Confetti />
-          <div className="animate-rise-in glass animate-victory-glow relative w-full max-w-md rounded-3xl p-8 text-center">
-            <Crown className="mx-auto h-14 w-14 text-amber-300 animate-bob" />
-            <p className="mt-4 font-display text-xs uppercase tracking-[0.3em] text-amber-200">Victory</p>
+          <div className="animate-rise-in glass relative w-full max-w-md rounded-3xl p-8 text-center">
+            <Crown className="mx-auto h-14 w-14 text-slate-200 animate-bob" />
+            <p className="mt-4 font-display text-xs uppercase tracking-[0.3em] text-indigo-300">Victory</p>
             <h2 className="mt-2 font-display text-3xl font-extrabold uppercase text-white">{winnerPlayer.name} Wins!</h2>
             <p className="mt-3 flex items-center justify-center gap-2 text-base text-slate-300">
-              <Trophy className="h-4 w-4 text-amber-300" /> Landed exactly on square {BOARD_SIZE}
+              <Trophy className="h-4 w-4 text-slate-300" /> Landed exactly on square {BOARD_SIZE}
             </p>
             <div className="mt-8 flex flex-col gap-3">
               <GlowButton onClick={onNewGame}>New Game</GlowButton>

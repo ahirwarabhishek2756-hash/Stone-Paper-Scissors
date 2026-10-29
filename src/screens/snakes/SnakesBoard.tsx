@@ -81,7 +81,7 @@ const LADDER_PATHS = Object.entries(LADDERS).map(([from, to]) => ({
 
 export default function SnakesBoard({ participants, positions }: SnakesBoardProps) {
   return (
-    <div className="glass neon-ring rounded-3xl p-3 sm:p-4">
+    <div className="glass rounded-3xl p-3 sm:p-4">
       <div className="relative aspect-square w-full overflow-hidden rounded-2xl">
         <div className="absolute inset-0 grid grid-cols-10 grid-rows-10 gap-px bg-slate-950/70">
           {DISPLAY_ROWS.flatMap((row, r) =>
@@ -119,7 +119,7 @@ export default function SnakesBoard({ participants, positions }: SnakesBoardProp
           return (
             <div
               key={i}
-              className="absolute flex h-[6%] w-[6%] items-center justify-center rounded-full border-2 border-white text-[10px] font-extrabold text-slate-950 shadow-[0_0_14px_currentColor] transition-[left,top] duration-300 ease-out sm:text-xs"
+              className="absolute flex h-[6%] w-[6%] items-center justify-center rounded-full border-2 border-white text-[10px] font-extrabold text-slate-950 transition-[left,top] duration-300 ease-out sm:text-xs"
               style={{
                 left: `${center.x + offset.x}%`,
                 top: `${center.y + offset.y}%`,

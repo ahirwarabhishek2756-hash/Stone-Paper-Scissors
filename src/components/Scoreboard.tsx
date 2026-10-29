@@ -14,8 +14,8 @@ export default function Scoreboard({ entries, draws, roundLabel }: ScoreboardPro
   return (
     <div className="glass rounded-2xl p-4">
       <div className="mb-3 flex items-center justify-between">
-        <h3 className="font-display text-xs font-extrabold uppercase tracking-[0.18em] text-cyan-100">Scoreboard</h3>
-        <span className="rounded-full bg-cyan-400/10 px-3 py-1 text-xs font-bold uppercase tracking-wider text-cyan-200">
+        <h3 className="font-display text-xs font-extrabold uppercase tracking-[0.18em] text-slate-200">Scoreboard</h3>
+        <span className="rounded-full bg-white/5 px-3 py-1 text-xs font-bold uppercase tracking-wider text-slate-300">
           {roundLabel}
         </span>
       </div>

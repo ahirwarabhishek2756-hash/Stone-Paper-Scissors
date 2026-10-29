@@ -24,7 +24,7 @@ const GAMES: GameInfo[] = [
     title: 'Stone Paper Scissors',
     description:
       'Read your rival, lock in your move, and outthink the arena. Play quick classic rounds or a tense best-of-five showdown.',
-    accent: 'from-cyan-400/30 to-sky-600/10',
+    accent: 'from-slate-700/40 to-indigo-900/30',
     players: '1 to 4 players',
   },
   {
@@ -33,7 +33,7 @@ const GAMES: GameInfo[] = [
     title: 'Snakes & Ladders',
     description:
       'Roll the dice, climb the ladders, and avoid the serpents. Race your friends to square 100 and land exactly to win.',
-    accent: 'from-fuchsia-400/30 to-pink-600/10',
+    accent: 'from-slate-700/40 to-violet-900/30',
     players: '1 to 4 players',
   },
 ];
@@ -45,7 +45,7 @@ export default function GameSelectScreen({ onHome, onSelect }: GameSelectScreenP
 
       <main className="mx-auto max-w-6xl px-4 py-12 sm:px-6 lg:py-16">
         <div className="animate-rise-in mb-10 text-center">
-          <p className="font-display text-xs uppercase tracking-[0.4em] text-fuchsia-300">Select a battle</p>
+          <p className="font-display text-xs uppercase tracking-[0.4em] text-indigo-300">Select a battle</p>
           <h1 className="gradient-text mt-3 font-display text-3xl font-extrabold uppercase sm:text-4xl">Choose Your Game</h1>
         </div>
 
@@ -53,7 +53,7 @@ export default function GameSelectScreen({ onHome, onSelect }: GameSelectScreenP
           {GAMES.map((game, index) => (
             <article
               key={game.id}
-              className="animate-rise-in group glass relative flex flex-col overflow-hidden rounded-3xl p-6 transition-all duration-500 hover:-translate-y-2 hover:border-cyan-300/50 hover:shadow-[0_0_50px_rgba(56,189,248,0.25)] sm:p-8"
+              className="animate-rise-in group glass relative flex flex-col overflow-hidden rounded-3xl p-6 transition-all duration-500 hover:-translate-y-1 hover:border-indigo-300/30 hover:shadow-[0_12px_32px_rgba(15,23,42,0.5)] sm:p-8"
               style={{ animationDelay: `${0.15 + index * 0.15}s` }}
             >
               <div className={`relative mb-6 flex h-52 items-center justify-center overflow-hidden rounded-2xl bg-gradient-to-br ${game.accent}`}>
@@ -87,16 +87,16 @@ export default function GameSelectScreen({ onHome, onSelect }: GameSelectScreenP
 
 function RpsEmblem() {
   const items = [
-    { Icon: Mountain, color: 'text-sky-200', pos: '-translate-x-16 translate-y-2' },
-    { Icon: FileText, color: 'text-cyan-100', pos: '-translate-y-6' },
-    { Icon: Scissors, color: 'text-fuchsia-200', pos: 'translate-x-16 translate-y-2' },
+    { Icon: Mountain, color: 'text-slate-200', pos: '-translate-x-16 translate-y-2' },
+    { Icon: FileText, color: 'text-slate-100', pos: '-translate-y-6' },
+    { Icon: Scissors, color: 'text-indigo-200', pos: 'translate-x-16 translate-y-2' },
   ];
   return (
     <div className="flex items-center justify-center">
       {items.map(({ Icon, color, pos }, i) => (
         <div
           key={i}
-          className={`animate-bob absolute flex h-20 w-20 items-center justify-center rounded-2xl border border-white/20 bg-slate-950/60 shadow-[0_0_24px_rgba(56,189,248,0.35)] transition-transform duration-500 group-hover:scale-110 ${pos}`}
+          className={`animate-bob absolute flex h-20 w-20 items-center justify-center rounded-2xl border border-white/10 bg-slate-950/70 transition-transform duration-500 group-hover:scale-110 ${pos}`}
           style={{ animationDelay: `${i * 0.3}s` }}
         >
           <Icon className={`h-9 w-9 ${color}`} strokeWidth={1.8} />

@@ -114,7 +114,7 @@ export default function RpsGameScreen({ setup, turnOffset, onHome, onMainMenu, o
                 <div
                   key={i}
                   className={`rounded-2xl border bg-slate-950/50 p-3 text-center transition-all duration-300 ${
-                    isActive ? 'border-cyan-300/70 shadow-[0_0_24px_rgba(56,189,248,0.3)]' : 'border-white/10'
+                    isActive ? 'border-slate-400/40' : 'border-white/10'
                   }`}
                   style={{ borderTopColor: p.color, borderTopWidth: 3 }}
                 >
@@ -138,7 +138,7 @@ export default function RpsGameScreen({ setup, turnOffset, onHome, onMainMenu, o
           <div className="flex flex-1 flex-col items-center justify-center text-center">
             {state.phase === 'handoff' && active && (
               <div key={`handoff-${state.round}-${state.turn}`} className="animate-rise-in flex flex-col items-center gap-5">
-                <Lock className="h-10 w-10 text-cyan-300" />
+                <Lock className="h-10 w-10 text-indigo-300" />
                 <h2 className="font-display text-2xl font-extrabold uppercase text-white">Pass the device to {active.name}</h2>
                 <p className="max-w-md text-base text-slate-300">
                   Everyone else look away. Only {active.name} should see the move buttons.
@@ -178,7 +178,7 @@ export default function RpsGameScreen({ setup, turnOffset, onHome, onMainMenu, o
               <div className="flex w-full flex-col items-center gap-6">
                 <div className="animate-pop">
                   <p className="font-display text-3xl font-extrabold uppercase text-white sm:text-4xl">{headline}</p>
-                  <p className="mt-2 text-lg text-cyan-200">
+                  <p className="mt-2 text-lg text-slate-300">
                     {last.winningMove ? describeWin(last.winningMove) : 'Nobody takes this round'}
                   </p>
                 </div>
@@ -205,10 +205,10 @@ export default function RpsGameScreen({ setup, turnOffset, onHome, onMainMenu, o
       </main>
 
       {state.phase === 'matchOver' && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/70 p-4 backdrop-blur-sm">
+        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/60 p-4">
           <Confetti />
-          <div className="animate-rise-in glass animate-victory-glow relative w-full max-w-md rounded-3xl p-8 text-center">
-            <Trophy className="mx-auto h-14 w-14 text-amber-300" />
+          <div className="animate-rise-in glass relative w-full max-w-md rounded-3xl p-8 text-center">
+            <Trophy className="mx-auto h-14 w-14 text-slate-200" />
             <h2 className="mt-4 font-display text-2xl font-extrabold uppercase text-white">
               {champions.length > 1 ? "It's a Tie!" : `${participants[champions[0]].name} Wins the Match!`}
             </h2>
@@ -233,9 +233,9 @@ function MoveButton({ move, onClick }: { move: Move; onClick: () => void }) {
     <button
       type="button"
       onClick={onClick}
-      className="focus-ring group flex flex-col items-center gap-3 rounded-2xl border border-cyan-300/30 bg-slate-950/60 p-4 transition-all duration-300 hover:-translate-y-1 hover:border-cyan-300/80 hover:shadow-[0_0_30px_rgba(56,189,248,0.35)] active:scale-95 sm:p-6"
+      className="focus-ring group flex flex-col items-center gap-3 rounded-2xl border border-white/10 bg-slate-950/60 p-4 transition-all duration-300 hover:-translate-y-1 hover:border-indigo-300/40 hover:bg-slate-900/80 active:scale-95 sm:p-6"
     >
-      <Icon className="h-10 w-10 text-cyan-200 transition-transform duration-300 group-hover:scale-110 sm:h-14 sm:w-14" />
+      <Icon className="h-10 w-10 text-slate-200 transition-transform duration-300 group-hover:scale-110 sm:h-14 sm:w-14" />
       <span className="font-display text-xs font-bold uppercase tracking-wider text-white sm:text-sm">{MOVE_LABEL[move]}</span>
     </button>
   );
@@ -244,7 +244,7 @@ function MoveButton({ move, onClick }: { move: Move; onClick: () => void }) {
 function CardIcon({ move }: { move: Move }) {
   const Icon = MOVE_ICON[move];
   return (
-    <span className="animate-reveal flex flex-col items-center gap-1 text-cyan-100">
+    <span className="animate-reveal flex flex-col items-center gap-1 text-slate-200">
       <Icon className="h-9 w-9" />
       <span className="text-[11px] font-bold uppercase tracking-wider">{MOVE_LABEL[move]}</span>
     </span>

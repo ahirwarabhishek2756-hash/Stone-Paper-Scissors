@@ -67,7 +67,7 @@ export default function PlayerSetupScreen({ game, onHome, onBack, onStart }: Pla
 
       <main className="mx-auto max-w-4xl px-4 py-10 sm:px-6">
         <div className="animate-rise-in mb-8 text-center">
-          <p className="font-display text-xs uppercase tracking-[0.4em] text-fuchsia-300">Player setup</p>
+          <p className="font-display text-xs uppercase tracking-[0.4em] text-indigo-300">Player setup</p>
           <h1 className="gradient-text mt-3 font-display text-3xl font-extrabold uppercase sm:text-4xl">
             Who is playing?
           </h1>
@@ -84,13 +84,13 @@ export default function PlayerSetupScreen({ game, onHome, onBack, onStart }: Pla
                 aria-pressed={selected}
                 className={`focus-ring group flex items-start gap-4 rounded-2xl border p-5 text-left transition-all duration-300 hover:-translate-y-0.5 ${
                   selected
-                    ? 'border-cyan-300/80 bg-cyan-400/10 shadow-[0_0_30px_rgba(56,189,248,0.3)]'
-                    : 'glass hover:border-cyan-300/40'
+                    ? 'border-indigo-300/50 bg-indigo-400/10'
+                    : 'glass hover:border-slate-400/30'
                 }`}
               >
                 <span
                   className={`flex h-12 w-12 shrink-0 items-center justify-center rounded-xl ${
-                    selected ? 'bg-cyan-300 text-slate-950' : 'bg-white/10 text-cyan-200'
+                    selected ? 'bg-slate-100 text-slate-950' : 'bg-white/5 text-slate-200'
                   }`}
                 >
                   <Icon className="h-6 w-6" />
@@ -108,7 +108,7 @@ export default function PlayerSetupScreen({ game, onHome, onBack, onStart }: Pla
 
         {game === 'rps' && (
           <section className="glass mt-8 rounded-2xl p-5">
-            <h2 className="font-display text-xs font-extrabold uppercase tracking-[0.18em] text-cyan-100">Match format</h2>
+            <h2 className="font-display text-xs font-extrabold uppercase tracking-[0.18em] text-slate-200">Match format</h2>
             <div className="mt-4 grid gap-3 sm:grid-cols-2">
               {FORMATS.map((format) => {
                 const selected = format.id === rpsFormat;
@@ -119,7 +119,7 @@ export default function PlayerSetupScreen({ game, onHome, onBack, onStart }: Pla
                     onClick={() => setRpsFormat(format.id)}
                     aria-pressed={selected}
                     className={`focus-ring rounded-xl border p-4 text-left transition-all duration-300 ${
-                      selected ? 'border-fuchsia-300/70 bg-fuchsia-400/10' : 'border-white/10 bg-slate-950/40 hover:border-fuchsia-300/40'
+                      selected ? 'border-indigo-300/50 bg-indigo-400/10' : 'border-white/10 bg-slate-950/40 hover:border-slate-400/30'
                     }`}
                   >
                     <span className="block font-display text-sm font-bold uppercase tracking-wider text-white">{format.title}</span>
@@ -132,7 +132,7 @@ export default function PlayerSetupScreen({ game, onHome, onBack, onStart }: Pla
         )}
 
         <section key={mode} className="animate-rise-in glass mt-8 rounded-2xl p-5">
-          <h2 className="font-display text-xs font-extrabold uppercase tracking-[0.18em] text-cyan-100">
+          <h2 className="font-display text-xs font-extrabold uppercase tracking-[0.18em] text-slate-200">
             {mode === 'computer' ? 'Your name' : 'Enter player names'}
           </h2>
           <div className="mt-4 grid gap-4 sm:grid-cols-2">
@@ -146,7 +146,7 @@ export default function PlayerSetupScreen({ game, onHome, onBack, onStart }: Pla
                   onChange={(e) => updateName(i, e.target.value)}
                   maxLength={MAX_NAME_LENGTH}
                   placeholder={`Player ${i + 1}`}
-                  className="focus-ring w-full rounded-xl border border-white/15 bg-slate-950/70 px-4 py-3 text-lg text-white placeholder:text-slate-500 focus:border-cyan-300/70"
+                  className="focus-ring w-full rounded-xl border border-white/15 bg-slate-950/70 px-4 py-3 text-lg text-white placeholder:text-slate-500 focus:border-indigo-300/50"
                 />
               </label>
             ))}

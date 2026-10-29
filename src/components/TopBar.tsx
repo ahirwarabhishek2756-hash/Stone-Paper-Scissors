@@ -18,7 +18,7 @@ export default function TopBar({ title, onHome, back }: TopBarProps) {
             </GlowButton>
           )}
         </div>
-        <h2 className="font-display truncate text-xs font-extrabold uppercase tracking-[0.2em] text-cyan-100 sm:text-sm">
+        <h2 className="font-display truncate text-xs font-extrabold uppercase tracking-[0.2em] text-slate-200 sm:text-sm">
           {title}
         </h2>
         <GlowButton variant="secondary" size="md" onClick={onHome} icon={<Home className="h-4 w-4" />}>
